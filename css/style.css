@@ -11,7 +11,7 @@
   --pink: #e83e8c;
   --red: #dc3545;
   --orange: #fd7e14;
-  --yellow: #ffc107;
+  --yellow: #d4af37;
   --green: #28a745;
   --teal: #20c997;
   --cyan: #17a2b8;
@@ -1732,10 +1732,10 @@ a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-  color: #afa939; }
+  color: #ff9800; }
   a:hover, a:focus {
     text-decoration: none;
-    color: #afa939;
+    color: #ff9800;
     outline: none !important; }
 
 h1, h2, h3, h4,
@@ -1774,7 +1774,7 @@ h1, h2, h3, h4,
     font-weight: 400;
     opacity: 1 !important; }
     .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
-      color: #afa939; }
+      color: var(--yellow); }
     @media (max-width: 991.98px) {
       .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
         padding-left: 0;
@@ -1788,13 +1788,13 @@ h1, h2, h3, h4,
     box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41); }
   .ftco-navbar-light .navbar-nav > .nav-item.cta > a {
     color: #fff;
-    border: 1px solid #afa939;
+    border: 1px solid var(--yellow);
     padding-top: .5rem;
     padding-bottom: .5rem;
     padding-left: 18px;
     padding-right: 18px;
     margin-top: 4px;
-    background: #afa939;
+    background: var(--yellow);
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     -ms-border-radius: 2px;
@@ -1803,10 +1803,10 @@ h1, h2, h3, h4,
       display: inline-block;
       color: #fff; }
     .ftco-navbar-light .navbar-nav > .nav-item.cta > a:hover {
-      background: #afa939;
-      border: 1px solid #afa939; }
+      background: var(--yellow);
+      border: 1px solid var(--yellow); }
   .ftco-navbar-light .navbar-nav > .nav-item.active > a {
-    color: #afa939; }
+    color: var(--yellow); }
   .ftco-navbar-light .navbar-toggler {
     border: none;
     color: rgba(255, 255, 255, 0.5) !important;
@@ -1817,7 +1817,7 @@ h1, h2, h3, h4,
     letter-spacing: .1em; }
     .ftco-navbar-light .navbar-toggler:hover, .ftco-navbar-light .navbar-toggler:focus {
       text-decoration: none;
-      color: #afa939;
+      color: var(--yellow);
       outline: none !important; }
   .ftco-navbar-light.scrolled {
     position: fixed;
@@ -1834,10 +1834,10 @@ h1, h2, h3, h4,
         padding-right: 0 !important;
         padding-bottom: 0 !important; } }
     .ftco-navbar-light.scrolled .nav-item.active > a {
-      color: #afa939 !important; }
+      color: var(--yellow) !important; }
     .ftco-navbar-light.scrolled .nav-item.cta > a {
       color: #fff !important;
-      background: #afa939;
+      background: var(--yellow);
       border: none !important;
       padding-top: 0.5rem !important;
       padding-bottom: .5rem !important;
@@ -1915,7 +1915,7 @@ h1, h2, h3, h4,
     bottom: 0;
     content: '';
     opacity: .5;
-    background: #000000; }
+    background: #2c2c2c; }
   .hero-wrap.hero-wrap-2 {
     height: 700px; }
     .hero-wrap.hero-wrap-2 .overlay {
@@ -2077,13 +2077,13 @@ h1, h2, h3, h4,
   .btn:hover, .btn:active, .btn:focus {
     outline: none; }
   .btn.btn-primary {
-    background: #afa939 !important;
-    border: 1px solid #afa939 !important;
+    background: var(--yellow) !important;
+    border: 1px solid var(--yellow) !important;
     color: #fff !important; }
     .btn.btn-primary:hover {
-      border: 1px solid #afa939;
+      border: 1px solid var(--yellow);
       background: transparent;
-      color: #afa939; }
+      color: var(--yellow); }
 
 @media (max-width: 767.98px) {
   .img-video {
@@ -2092,7 +2092,7 @@ h1, h2, h3, h4,
 .icon-video {
   width: 80px;
   height: 80px;
-  background: #afa939;
+  background: var(--yellow);
   -webkit-animation: pulse 2s infinite;
   animation: pulse 2s infinite;
   -webkit-border-radius: 50%;
@@ -2110,7 +2110,7 @@ h1, h2, h3, h4,
   font-size: 20px;
   display: inline-block;
   padding: 20px;
-  background: #afa939; }
+  background: var(--yellow); }
   @media (min-width: 768px) {
     .years h4 {
       margin-left: -64px;
@@ -2129,11 +2129,11 @@ h1, h2, h3, h4,
   font-weight: 600;
   border: 1px solid rgba(0, 0, 0, 0.1); }
   .tabulation-2 .nav-pills .nav-item .nav-link span {
-    color: #afa939; }
+    color: var(--yellow); }
   .tabulation-2 .nav-pills .nav-item .nav-link.active {
     color: #fff;
-    background: #afa939;
-    border: 1px solid #afa939; }
+    background: var(--yellow);
+    border: 1px solid var(--yellow); }
     .tabulation-2 .nav-pills .nav-item .nav-link.active span {
       color: #fff; }
 
@@ -2154,7 +2154,7 @@ h1, h2, h3, h4,
     z-index: -1;
     content: '';
     height: 140px;
-    background: #afa939; }
+    background: var(--yellow); }
     @media (max-width: 767.98px) {
       .services-wrap:after {
         height: 100%; } }
@@ -2285,7 +2285,6 @@ h1, h2, h3, h4,
     right: 0;
     bottom: 0;
     content: '';
-    background: #afa939;
     opacity: 0;
     z-index: -1;
     -moz-transition: all 0.3s ease;
@@ -2307,12 +2306,6 @@ h1, h2, h3, h4,
       font-size: 22px; }
     .case .text span {
       color: rgba(255, 255, 255, 0.9); }
-  .case:hover:after {
-    opacity: .5;
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px; }
   .case:hover .text {
     opacity: 1; }
 
@@ -2388,11 +2381,11 @@ textarea.form-control {
   font-size: 24px; }
 
 .ftco-section {
-  padding: 7em 0;
+  padding: 3em 0;
   position: relative; }
   @media (max-width: 767.98px) {
     .ftco-section {
-      padding: 6em 0; } }
+      padding: 2em 0; } }
 
 .ftco-bg-dark {
   background: #3c312e; }
@@ -2499,11 +2492,11 @@ textarea.form-control {
     box-shadow: 0 0 0 0 rgba(175, 169, 57, 0); } }
 
 .heading-section .subheading {
-  font-size: 16px;
+  font-size: 28px;
   display: block;
   margin-bottom: 5px;
   font-weight: 700;
-  color: #afa939; }
+  color: var(--yellow); }
 
 .heading-section h2 {
   font-size: 30px;
@@ -2592,7 +2585,7 @@ textarea.form-control {
       border-radius: 50%;
       background: rgba(0, 0, 0, 0.1); }
       .testimony-section .owl-dots .owl-dot.active {
-        background: #afa939; }
+        background: var(--yellow); }
 
 .testimony-wrap {
   display: block;
@@ -2618,7 +2611,7 @@ textarea.form-control {
     color: #000000; }
   .testimony-wrap .position {
     font-size: 16px;
-    color: #afa939; }
+    color: var(--yellow); }
 
 .image-popup {
   cursor: -webkit-zoom-in;
