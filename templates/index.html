@@ -144,23 +144,22 @@
     <div class="row ftco-animate">
       <div class="col-md-12">
         <div class="carousel-testimony owl-carousel ftco-owl">
-          <div class="item">
-            <div class="testimony-wrap py-4">
-              <div class="text">
-                <p class="mb-5">Денис, хочу сказать спасибо! Вы действительно профессионал своего дела. У нас была цель
-                  продать билеты на концерт за 4 месяца, а с вами мы сделали это за 2 месяца — зал полностью забит, 3500
-                  билетов продано. Огромное спасибо! Теперь работаем только с вами, как и обещал, бонус отправил. До
-                  связи!</p>
-                <div class="d-flex align-items-center">
-                  <div class="user-img" style="background-image: url(../static/images/person_1.jpg)"></div>
-                  <div class="pl-3">
-                    <p class="name">Tigran Hakhumyan</p>
-                    <span class="position">Marketing Manager</span>
+          {% for testimony in testimonies %}
+            <div class="item">
+              <div class="testimony-wrap py-4">
+                <div class="text">
+                  <p class="mb-5">{{ testimony.text|linebreaksbr }}</p>
+                  <div class="d-flex align-items-center">
+                    <div class="user-img" style="background-image: url({{ testimony.image.url }})"></div>
+                    <div class="pl-3">
+                      <p class="name">{{ testimony.name }}</p>
+                      <span class="position">{{ testimony.position }}</span>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div> <!-- ВОТ ТУТ ЦИКЛ-->
+          {% endfor %}
         </div>
       </div>
     </div>
