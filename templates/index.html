@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,17 +10,13 @@
 
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
   <link rel="stylesheet" href="css/animate.css">
-
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <link rel="stylesheet" href="css/magnific-popup.css">
-
   <link rel="stylesheet" href="css/aos.css">
-
   <link rel="stylesheet" href="css/ionicons.min.css">
-
   <link rel="stylesheet" href="css/flaticon.css">
   <link rel="stylesheet" href="css/icomoon.css">
   <link rel="stylesheet" href="css/style.css">
@@ -49,7 +47,7 @@
 </nav>
 <!-- END nav -->
 
-<div class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');"
+<div class="hero-wrap js-fullheight" style="background-image: url('../static/images/bg_1.jpg');"
      data-stellar-background-ratio="0.5">
   <div class="overlay"></div>
   <div class="container">
@@ -75,7 +73,7 @@
       <div class="col-md-6 d-flex">
         <div
             class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-end"
-            style="background-image:url(images/about.jpg);">
+            style="background-image:url(../static/images/about.jpg);">
         </div>
       </div>
       <div class="col-md-6 pl-md-5">
@@ -118,7 +116,7 @@
         <div class="carousel-case owl-carousel ftco-owl">
           <div class="item">
             <div class="case img d-flex align-items-center justify-content-center"
-                 style="background-image: url(images/case-1.jpg);">
+                 style="background-image: url(../static/images/case-1.jpg);">
             </div>
             <div class="case-description text-center mt-3">
               <h3>Греция — Яхты</h3>
@@ -157,7 +155,7 @@
                   билетов продано. Огромное спасибо! Теперь работаем только с вами, как и обещал, бонус отправил. До
                   связи!</p>
                 <div class="d-flex align-items-center">
-                  <div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+                  <div class="user-img" style="background-image: url(../static/images/person_1.jpg)"></div>
                   <div class="pl-3">
                     <p class="name">Tigran Hakhumyan</p>
                     <span class="position">Marketing Manager</span>
@@ -186,7 +184,7 @@
           <div class="text px-4 py-4">
             <h3 class="heading mb-0"><span>Таргетированная реклама</span></h3>
           </div>
-          <div class="block-20" style="background-image: url('images/image_1.jpg');"></div>
+          <div class="block-20" style="background-image: url('../static/images/image_1.jpg');"></div>
           <div class="text p-4 float-right d-block">
             <p>Разрабатываю рекламные кампании, ориентированные на точную аудиторию, используя передовые подходы для
               максимальной эффективности. Мои стратегии направлены на повышение конверсий и ROI, независимо от масштаба
@@ -199,7 +197,7 @@
           <div class="text px-4 py-4">
             <h3 class="heading mb-0"><span>Ведение соцсетей & SMM</span></h3>
           </div>
-          <div class="block-20" style="background-image: url('images/image_2.jpg');"></div>
+          <div class="block-20" style="background-image: url('../static/images/image_2.jpg');"></div>
           <div class="text p-4 float-right d-block">
             <p>Формирую стратегию продвижения бренда в социальных сетях: анализ целевой аудитории, разработка
               контент-плана, создание и публикация материалов, взаимодействие с подписчиками и мониторинг результатов.
@@ -212,7 +210,7 @@
           <div class="text px-4 py-4">
             <h3 class="heading mb-0"><span>Видеопродакшн</span></h3>
           </div>
-          <div class="block-20" style="background-image: url('images/image_3.jpg');"></div>
+          <div class="block-20" style="background-image: url('../static/images/image_3.jpg');"></div>
           <div class="text p-4 float-right d-block">
             <p>Процесс создания видеоконтента, охватывающий все этапы — от разработки идеи и сценария до съёмки, монтажа
               и постпродакшн. Включает производство рекламных роликов, корпоративных фильмов и других форматов
