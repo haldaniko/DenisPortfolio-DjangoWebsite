@@ -2545,7 +2545,7 @@ h1, h2, h3, h4,
 
 @media (max-width: 991.98px) {
     .slider-text h1 {
-        font-size: 40px;
+        font-size: 28px;
     }
 }
 
@@ -4292,7 +4292,7 @@ textarea.form-control {
 }
 
 .footer-left {
-    flex: 1 1 50%;
+    flex: 1 1 40%;
 }
 
 .footer-logo a {
@@ -4359,21 +4359,43 @@ textarea.form-control {
 
 
 .footer-right {
-    flex: 1 1 40%;
-    min-width: 400px;
+    flex: 1 1 50%;
+    min-width: 300px;
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 322px) {
     .footer-grid {
         flex-direction: column;
     }
 
     .footer-left, .footer-right {
-        flex: 1 1 100%;
+        flex: 1 1 70%;
     }
 
     .footer-right iframe {
         height: 250px;
+        width: 280px
+    }
+}
+
+
+@media (max-width: 900px) {
+    .footer-grid {
+        flex-direction: column;
+    }
+
+    .footer-left, .footer-right {
+        flex: 1 1 70%;
+    }
+
+    .footer-right iframe {
+        display: none
+    }
+}
+
+@media (max-width: 1250px) {
+    .footer-right iframe {
+        width: 500px;
     }
 }
