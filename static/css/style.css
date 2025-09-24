@@ -385,6 +385,7 @@ a > code {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    padding-bottom: 20px;
 }
 
 @media (min-width: 576px) {
@@ -2608,6 +2609,7 @@ h1, h2, h3, h4,
 
 .owl-carousel {
     position: relative;
+    touch-action: pan-y !important;
 }
 
 .owl-carousel .owl-item {
@@ -3307,6 +3309,7 @@ textarea.form-control {
     display: block;
     font-weight: 600;
     color: var(--yellow);
+    margin-bottom: 20px;
 }
 
 .heading-section h2 {
@@ -4443,4 +4446,34 @@ textarea.form-control {
     height: 2px;
     background: var(--yellow);
     border-radius: 2px;
+}
+
+.btn-yellow {
+    color: #fff !important;
+    background: var(--yellow);
+    border: none !important;
+    padding: 15px 40px !important;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.center {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.carousel-testimony .item {
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.owl-item {
+    vertical-align: top; /* или middle */
+}
+
+.owl-item {
+    margin: 0; /* margin для позиционирования задаём через owlCarousel options */
 }

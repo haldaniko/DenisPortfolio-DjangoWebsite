@@ -73,7 +73,9 @@ AOS.init({
             navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
             responsive: {
                 0: {
-                    items: 1
+                    items: 1,
+                    touchDrag: true,
+                    mouseDrag: false
                 },
                 600: {
                     items: 2
@@ -90,11 +92,12 @@ AOS.init({
             items: 1,
             margin: 30,
             stagePadding: 0,
-            nav: false,
-            navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
+            nav: true,
             responsive: {
                 0: {
-                    items: 1
+                    items: 1,
+                    mouseDrag: false,
+                    touchDrag: true
                 },
                 600: {
                     items: 2
@@ -221,7 +224,6 @@ AOS.init({
 
     }
     counter();
-
 
     var contentWayPoint = function () {
         var i = 0;
@@ -370,6 +372,9 @@ AOS.init({
             }
         }
     };
+
+
+
 
 })(jQuery);
 
