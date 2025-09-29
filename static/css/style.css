@@ -1099,7 +1099,7 @@ fieldset:disabled a.btn {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 1rem;
 }
 
 .navbar > .container,
@@ -1121,9 +1121,7 @@ fieldset:disabled a.btn {
 
 .navbar-brand {
     display: inline-block;
-    padding-top: 0.3125rem;
-    padding-bottom: 0.3125rem;
-    margin-right: 1rem;
+    padding-top: 0.3225rem;
     font-size: 1.25rem;
     line-height: inherit;
     white-space: nowrap;
@@ -2458,13 +2456,6 @@ h1, h2, h3, h4,
     font-size: 20px;
     font-family: "Poppins", Arial, sans-serif;
     line-height: 1;
-    text-transform: uppercase;
-}
-
-.navbar-brand span {
-    display: block;
-    font-size: 11px;
-    font-weight: 600;
     text-transform: uppercase;
 }
 
@@ -4405,8 +4396,8 @@ textarea.form-control {
 }
 
 .nav-item.cta .nav-link {
-  text-align: center;
-  display: block;
+    text-align: center;
+    display: block;
 }
 
 .lang-switcher {
@@ -4430,6 +4421,12 @@ textarea.form-control {
     font-size: 0.9rem;
     position: relative;
     transition: color 0.3s;
+}
+
+@media (max-width: 1024px) {
+    .nav-lang-link {
+        font-size: 0.8rem;
+    }
 }
 
 .nav-lang-link:hover {
@@ -4460,7 +4457,13 @@ textarea.form-control {
 
 .center {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px;
+}
+
+@media (min-width: 1024px) {
+    .center {
+        display: none;
+    }
 }
 
 .carousel-testimony .item {
@@ -4476,4 +4479,33 @@ textarea.form-control {
 
 .owl-item {
     margin: 0; /* margin для позиционирования задаём через owlCarousel options */
+}
+
+.navbar-brand span {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.lang-switcher-mobile {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .navbar-brand span {
+        font-size: 7px;
+    }
+
+    .navbar-nav .lang-switcher {
+        display: none !important;
+    }
+
+    .lang-switcher-mobile {
+        display: flex !important;
+    }
+
+    .navbar-nav .lang-switcher {
+        display: none;
+    }
 }

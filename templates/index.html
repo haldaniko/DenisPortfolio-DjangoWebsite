@@ -26,6 +26,14 @@
 <nav class="navbar px-md-0 navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
   <div class="container">
     <p class="navbar-brand">Denis.Pro.Target <span>Маркетинг & SMM</span></p>
+
+    <div class="lang-switcher-mobile">
+      <a href="/" class="nav-lang-link nav-lang-link-active">RU</a>
+      <a href="/bg/" class="nav-lang-link">BG</a>
+      <a href="/en/" class="nav-lang-link">EN</a>
+      <a href="/ua/" class="nav-lang-link">UA</a>
+    </div>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
             aria-controls="ftco-nav"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -297,18 +305,24 @@
 <script src="{% static 'js/scrollax.min.js' %}"></script>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    document.addEventListener("DOMContentLoaded", function () {
+        var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-    if (isIOS) {
-      if ($.stellar) {
-        try { $(window).stellar('destroy'); } catch(e) {}
-      }
-      if ($.Scrollax) {
-        try { $.Scrollax.destroy(); } catch(e) {}
-      }
-    }
-  });
+        if (isIOS) {
+            if ($.stellar) {
+                try {
+                    $(window).stellar('destroy');
+                } catch (e) {
+                }
+            }
+            if ($.Scrollax) {
+                try {
+                    $.Scrollax.destroy();
+                } catch (e) {
+                }
+            }
+        }
+    });
 </script>
 
 <script src="{% static 'js/main.js' %}"></script>
