@@ -168,23 +168,28 @@
     </div>
     <div class="row ftco-animate">
       <div class="col-md-12">
-        <div class="carousel-testimony owl-carousel ftco-owl">
-          {% for testimony in testimonies %}
-            <div class="item">
-              <div class="testimony-wrap py-4">
-                <div class="text">
-                  <p class="mb-5">{{ testimony.text|linebreaksbr }}</p>
-                  <div class="d-flex align-items-center">
-                    <div class="user-img" style="background-image: url({{ testimony.image.url }})"></div>
-                    <div class="pl-3">
-                      <p class="name">{{ testimony.name }}</p>
-                      <span class="position">{{ testimony.position }}</span>
+        <!-- Splide слайдер -->
+        <div id="reviews-slider" class="splide ftco-owl">
+          <div class="splide__track">
+            <ul class="splide__list">
+              {% for testimony in testimonies %}
+                <li class="splide__slide">
+                  <div class="testimony-wrap py-4">
+                    <div class="text">
+                      <p class="mb-5">{{ testimony.text|linebreaksbr }}</p>
+                      <div class="d-flex align-items-center">
+                        <div class="user-img" style="background-image: url({{ testimony.image.url }})"></div>
+                        <div class="pl-3">
+                          <p class="name">{{ testimony.name }}</p>
+                          <span class="position">{{ testimony.position }}</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          {% endfor %}
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -350,6 +355,19 @@
         }).mount();
     });
 </script>
-
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        new Splide('#reviews-slider', {
+            type: 'loop',
+            perPage: 2,
+            gap: '1rem',
+            autoplay: true,
+            breakpoints: {
+                992: {perPage: 1},
+                600: {perPage: 1},
+            },
+        }).mount();
+    });
+</script>
 </body>
 </html>
