@@ -38,9 +38,9 @@ AOS.init({
             stagePadding: 0,
             nav: false,
             responsive: {
-                0: { items: 1, touchDrag: true, mouseDrag: false },
-                600: { items: 2 },
-                1000: { items: 3 }
+                0: {items: 1, touchDrag: true, mouseDrag: false},
+                600: {items: 2},
+                1000: {items: 3}
             }
         });
 
@@ -52,9 +52,9 @@ AOS.init({
             stagePadding: 0,
             nav: true,
             responsive: {
-                0: { items: 1, mouseDrag: false, touchDrag: true },
-                600: { items: 2 },
-                1000: { items: 3 }
+                0: {items: 1, mouseDrag: false, touchDrag: true},
+                600: {items: 2},
+                1000: {items: 3}
             }
         });
     };
@@ -103,10 +103,10 @@ AOS.init({
                 $('.number').each(function () {
                     const $this = $(this),
                         num = $this.data('number');
-                    $this.animateNumber({ number: num, numberStep: commaStep }, 7000);
+                    $this.animateNumber({number: num, numberStep: commaStep}, 7000);
                 });
             }
-        }, { offset: '95%' });
+        }, {offset: '95%'});
     };
     counter();
 
@@ -130,7 +130,7 @@ AOS.init({
                     });
                 }, 100);
             }
-        }, { offset: '95%' });
+        }, {offset: '95%'});
     };
     contentWayPoint();
 
@@ -139,7 +139,7 @@ AOS.init({
             e.preventDefault();
             const hash = this.hash,
                 navToggler = $('.navbar-toggler');
-            $('html, body').animate({ scrollTop: $(hash).offset().top }, 700, 'easeInOutExpo', () => {
+            $('html, body').animate({scrollTop: $(hash).offset().top}, 700, 'easeInOutExpo', () => {
                 window.location.hash = hash;
             });
             if (navToggler.is(':visible')) navToggler.click();
@@ -153,9 +153,9 @@ AOS.init({
         closeBtnInside: false,
         fixedContentPos: true,
         mainClass: 'mfp-no-margins mfp-with-zoom',
-        gallery: { enabled: true, navigateByImgClick: true, preload: [0, 1] },
-        image: { verticalFit: true },
-        zoom: { enabled: true, duration: 300 }
+        gallery: {enabled: true, navigateByImgClick: true, preload: [0, 1]},
+        image: {verticalFit: true},
+        zoom: {enabled: true, duration: 300}
     });
 
     $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
@@ -177,6 +177,7 @@ AOS.init({
             this.isDeleting = false;
             this.tick();
         }
+
         tick() {
             const i = this.loopNum % this.toRotate.length;
             const fullTxt = this.toRotate[i];

@@ -2601,6 +2601,8 @@ h1, h2, h3, h4,
 .owl-carousel {
     position: relative;
     touch-action: pan-y !important;
+    overflow: visible;
+    display: block !important;
 }
 
 .owl-carousel .owl-item {
@@ -4508,4 +4510,31 @@ textarea.form-control {
     .navbar-nav .lang-switcher {
         display: none;
     }
+}
+
+
+.swiper {
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.swiper-slide .case {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+.ftco-section, .row, .container {
+    transform: none !important;
+}
+
+.owl-carousel {
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+}
+
+.owl-nav, .owl-dots {
+  position: relative;
+  z-index: 9999;
 }
