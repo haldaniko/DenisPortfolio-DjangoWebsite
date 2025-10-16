@@ -237,7 +237,7 @@
       <div class="col-md-4 d-flex ftco-animate">
         <div class="blog-entry justify-content-end">
           <div class="text px-4 py-4">
-            <h3 class="heading mb-0"><span>Видеопродакшн</span></h3>
+            <h3 class="heading mb-0"><span>Видеопродакшн + AI</span></h3>
           </div>
           <div class="block-20" style="background-image: url('{% static 'images/image_3.jpg' %}');"></div>
           <div class="text p-4 float-right d-block">
@@ -368,6 +368,14 @@
             },
         }).mount();
     });
+
+    function setVh() {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+
+    window.addEventListener('resize', setVh);
+    setVh();
 </script>
 </body>
 </html>

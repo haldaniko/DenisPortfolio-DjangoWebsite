@@ -20,6 +20,8 @@
   <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
   <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.0/dist/css/themes/splide-default.min.css">
 </head>
 <body>
 
@@ -132,18 +134,23 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        <div class="carousel-case owl-carousel ftco-owl">
-          {% for case in cases %}
-            <div class="item">
-              <div class="case img d-flex align-items-center justify-content-center"
-                   style="background-image: url({{ case.image.url }});">
-              </div>
-              <div class="case-description text-center mt-3">
-                <h3>{{ case.title }}</h3>
-                <p>{{ case.description|linebreaksbr }}</p>
-              </div>
-            </div>
-          {% endfor %}
+        <!-- Splide слайдер -->
+        <div id="cases-slider" class="splide ftco-owl">
+          <div class="splide__track">
+            <ul class="splide__list">
+              {% for case in cases %}
+                <li class="splide__slide">
+                  <div class="case img d-flex align-items-center justify-content-center"
+                       style="background-image: url({{ case.image.url }});">
+                  </div>
+                  <div class="case-description text-center mt-3">
+                    <h3>{{ case.title }}</h3>
+                    <p>{{ case.description|linebreaksbr }}</p>
+                  </div>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -163,28 +170,33 @@
     </div>
     <div class="row ftco-animate">
       <div class="col-md-12">
-        <div class="carousel-testimony owl-carousel ftco-owl">
-          {% for testimony in testimonies %}
-            <div class="item">
-              <div class="testimony-wrap py-4">
-                <div class="text">
-                  <p class="mb-5">{{ testimony.text|linebreaksbr }}</p>
-                  <div class="d-flex align-items-center">
-                    <div class="user-img" style="background-image: url({{ testimony.image.url }})"></div>
-                    <div class="pl-3">
-                      <p class="name">{{ testimony.name }}</p>
-                      <span class="position">{{ testimony.position }}</span>
+        <!-- Splide слайдер -->
+        <div id="reviews-slider" class="splide ftco-owl">
+          <div class="splide__track">
+            <ul class="splide__list">
+              {% for testimony in testimonies %}
+                <li class="splide__slide">
+                  <div class="testimony-wrap py-4">
+                    <div class="text">
+                      <p class="mb-5">{{ testimony.text|linebreaksbr }}</p>
+                      <div class="d-flex align-items-center">
+                        <div class="user-img" style="background-image: url({{ testimony.image.url }})"></div>
+                        <div class="pl-3">
+                          <p class="name">{{ testimony.name }}</p>
+                          <span class="position">{{ testimony.position }}</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          {% endfor %}
-        </div>
-        <div class="center">
-          <a href="https://t.me/denisprotarget" class="btn-yellow">Безкоштовна консультація</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
         </div>
       </div>
+    </div>
+    <div class="center">
+      <a href="https://t.me/denisprotarget" class="btn-yellow">Бесплатная Консультация</a>
     </div>
   </div>
 </section>
@@ -227,7 +239,7 @@
       <div class="col-md-4 d-flex ftco-animate">
         <div class="blog-entry justify-content-end">
           <div class="text px-4 py-4">
-            <h3 class="heading mb-0"><span>Відеопродакшн</span></h3>
+            <h3 class="heading mb-0"><span>Відеопродакшн + AI</span></h3>
           </div>
           <div class="block-20" style="background-image: url('{% static 'images/image_3.jpg' %}');"></div>
           <div class="text p-4 float-right d-block">
@@ -300,15 +312,73 @@
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
 <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
 <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
-<script src="{% static 'js/jquery.stellar.min.js' %}"></script>
 <script src="{% static 'js/owl.carousel.min.js' %}"></script>
 <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
 <script src="{% static 'js/aos.js' %}"></script>
 <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+
 <script src="{% static 'js/scrollax.min.js' %}"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-<script src="{% static 'js/google-map.js' %}"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+        if (isIOS) {
+            if ($.stellar) {
+                try {
+                    $(window).stellar('destroy');
+                } catch (e) {
+                }
+            }
+            if ($.Scrollax) {
+                try {
+                    $.Scrollax.destroy();
+                } catch (e) {
+                }
+            }
+        }
+    });
+</script>
+
 <script src="{% static 'js/main.js' %}"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.0/dist/js/splide.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        new Splide('#cases-slider', {
+            type: 'loop',
+            perPage: 3,
+            gap: '1rem',
+            autoplay: true,
+            breakpoints: {
+                992: {perPage: 2},
+                600: {perPage: 1},
+            },
+        }).mount();
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        new Splide('#reviews-slider', {
+            type: 'loop',
+            perPage: 2,
+            gap: '1rem',
+            autoplay: true,
+            breakpoints: {
+                992: {perPage: 1},
+                600: {perPage: 1},
+            },
+        }).mount();
+    });
+
+    function setVh() {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+
+    window.addEventListener('resize', setVh);
+    setVh();
+</script>
 
 </body>
 </html>
